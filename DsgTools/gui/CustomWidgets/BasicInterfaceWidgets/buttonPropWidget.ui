@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ButtonPropWidget</class>
+ <widget class="QWidget" name="ButtonPropWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>517</width>
+    <height>418</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="6" column="2">
+    <widget class="ShortcutChooserWidget" name="shortcutWidget" native="true">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Button name</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Acquisition tool</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QCheckBox" name="colorCheckBox">
+     <property name="text">
+      <string>Assign Color</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0" colspan="3">
+    <widget class="QCheckBox" name="openFormCheckBox">
+     <property name="text">
+      <string>Open feature form when digitizing</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="2">
+    <widget class="QLineEdit" name="nameLineEdit">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="placeholderText">
+      <string>Type in the text to identify this button...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="0">
+    <widget class="QLabel" name="label_3">
+     <property name="text">
+      <string>Receiving layer</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QCheckBox" name="categoryCheckBox">
+     <property name="text">
+      <string>Custom category</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="2">
+    <widget class="QLineEdit" name="toolTipLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Tooltip text to be exposed when button is hovered...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QLineEdit" name="keywordLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="toolTip">
+      <string>Keywords should be space separated, avoid punctuations</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="placeholderText">
+      <string>Space separated keywords for button quick search...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="2">
+    <widget class="QgsColorButton" name="mColorButton"/>
+   </item>
+   <item row="1" column="2">
+    <widget class="QComboBox" name="toolComboBox"/>
+   </item>
+   <item row="5" column="0">
+    <widget class="QCheckBox" name="keywordCheckBox">
+     <property name="text">
+      <string>Button keywords</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QCheckBox" name="tooltipCheckBox">
+     <property name="text">
+      <string>Assign Tooltip</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="2">
+    <widget class="QLineEdit" name="categoryLineEdit">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="placeholderText">
+      <string>Group to which button will be assigned...</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QCheckBox" name="shortcutCheckBox">
+     <property name="text">
+      <string>Assign Shortcut</string>
+     </property>
+    </widget>
+   </item>
+   <item row="9" column="1" colspan="2">
+    <widget class="QgsMapLayerComboBox" name="mMapLayerComboBox"/>
+   </item>
+   <item row="10" column="0" colspan="3">
+    <widget class="QTableWidget" name="attributeTableWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <column>
+      <property name="text">
+       <string>Attribute</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Value</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>PK</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Editable</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Ignored</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QgsColorButton</class>
+   <extends>QToolButton</extends>
+   <header>qgscolorbutton.h</header>
+  </customwidget>
+  <customwidget>
+   <class>QgsMapLayerComboBox</class>
+   <extends>QComboBox</extends>
+   <header>qgsmaplayercombobox.h</header>
+  </customwidget>
+  <customwidget>
+   <class>ShortcutChooserWidget</class>
+   <extends>QWidget</extends>
+   <header>DsgTools.gui.CustomWidgets.BasicInterfaceWidgets.shortcutChooserWidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
